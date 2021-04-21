@@ -30,7 +30,7 @@ Ubuntu下Hadoop安装: https://blog.csdn.net/qq_36561697/article/details/8099440
 		$ export CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath):$CLASSPATH
 		$ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 		$ export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
-		$ source ~./bashrc									   #激活bash
+		$ source ~/.bashrc									   #激活bash
 		$ hadoop version									   #查看hadoop是否安装成功
 		```
 	5. hadoop设置
@@ -85,5 +85,94 @@ Ubuntu下Hadoop安装: https://blog.csdn.net/qq_36561697/article/details/8099440
 				1. Hadoop3:http://localhost:9870/
 				2. Hadoop2:http://localhost:50070
 			8. 暂停hadoop:`sbin/stop-all.sh`
+			9. 重置hadoop:
+				1. 需要删除`<name>dfs.datanode.data.dir</name>`下的文档
+				2. 格式化:`./bin/hdfs namenode -format`
+				3. 开启服务:`./sbin/start-dfs.sh`
 	
 1. win10 需要手动导入winutils:https://last2win.com/windows-install-hadoop/#winutils
+
+2. Java:
+	* pom:
+	```
+	<?xml version="1.0" encoding="UTF-8"?>
+	<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Hadoop</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>15</source>
+                    <target>15</target>
+                </configuration>
+            </plugin>
+			<plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-core</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+	</project>
+	
+	
+	```
+
+
+
+
+
+
+
+
+
+
+

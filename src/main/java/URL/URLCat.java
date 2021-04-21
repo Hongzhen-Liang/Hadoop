@@ -1,4 +1,4 @@
-package runJava;
+package URL;
 
 import org.apache.hadoop.fs.FsUrlStreamHandlerFactory;
 import org.apache.hadoop.io.IOUtils;
@@ -6,6 +6,9 @@ import org.apache.hadoop.io.IOUtils;
 import java.io.InputStream;
 import java.net.URL;
 
+/**
+ * java.net.URL对象打开数据流，从中读取数据
+ */
 public class URLCat {
     public static void main(String[] args) throws Exception{
         URL.setURLStreamHandlerFactory( new  FsUrlStreamHandlerFactory());

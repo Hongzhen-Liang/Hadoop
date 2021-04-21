@@ -1,7 +1,6 @@
-package runJava;
+package URL;
 
 import org.apache.hadoop.conf.Configuration;
-
 import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -9,7 +8,10 @@ import org.apache.hadoop.io.IOUtils;
 
 import java.net.URI;
 
-public class FileSystemCat {
+/**
+ * 展示seek()移动绝对位置的能力，让文件输出两次.
+ */
+public class FileSystemDoubleCat {
     public static void main(String[] args) throws Exception{
         String uri = "hdfs://localhost:9000/usr/sinscry/test.txt";
         Configuration conf = new Configuration();
