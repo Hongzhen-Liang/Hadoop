@@ -24,3 +24,9 @@
         2. FileSystemCat: 通用文件api实现显示hadoop文件数据
         3. FileSystemDoubleCat: 展示seek()移动绝对位置的能力，让文件输出两次
         4. FileCopyWithProgress: 本地文件复制到Hadoop 文件系统
+    2. mapper_reducer: 查找最低气温
+        * resource/ncdc/micro:部分气温数据
+        1. MaxTemperatureMapper: mapper
+        2. MaxTemperatureReducer:reducer
+        3. MaxTemperatureDriver: 运行程序
+        
