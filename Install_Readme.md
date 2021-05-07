@@ -71,6 +71,17 @@ Ubuntu下Hadoop安装: https://blog.csdn.net/qq_36561697/article/details/8099440
 					</property>
 				</configuration>
 				```
+			4. yarn-site.xml:
+				```
+				<configuration>
+					<property>
+						<name>yarn.nodemanager.aux-services</name>
+						<value>mapreduce_shuffle</value>
+						<description>YARN 集群为 MapReduce 程序提供的 shuffle 服务</description>
+					</property>
+				</configuration>
+				```
+			
 			4. Hadoop 的运行方式是由配置文件决定的（运行 Hadoop 时会读取配置文件），因此如果需要从伪分布式模式切换回非分布式模式，需要删除 core-site.xml 中的配置项。此外，伪分布式虽然只需要配置 fs.defaultFS 和 dfs.replication 就可以运行（可参考官方教程），不过若没有配置 hadoop.tmp.dir 参数，则默认使用的临时目录为 /tmp/hadoo-hadoop，而这个目录在重启时有可能被系统清理掉，导致必须重新执行 format 才行。所以我们进行了设置，同时也指定 dfs.namenode.name.dir 和 dfs.datanode.data.dir，否则在接下来的步骤中可能会出错。
 			5. 配置完成后，执行 NameNode 的格式化:`./bin/hdfs namenode -format`
 			6. 启动namenode和datanode进程，并查看启动结果:

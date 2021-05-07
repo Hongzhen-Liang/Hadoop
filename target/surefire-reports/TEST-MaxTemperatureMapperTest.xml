@@ -1,64 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="MaxTemperatureMapperTest" time="0.341" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="MaxTemperatureMapperTest" time="2.65" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="java.vm.version" value="15+36-1562"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:/Github/Hadoop"/>
+    <property name="java.vm.version" value="15.0.2+7-27"/>
+    <property name="sun.boot.library.path" value="/opt/jdk-15.0.2/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/mnt/d/Github/Hadoop"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=";"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="sun.os.patch.level" value=""/>
-    <property name="user.script" value=""/>
-    <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Github\Hadoop"/>
+    <property name="user.dir" value="/mnt/d/Github/Hadoop"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="15+36-1562"/>
+    <property name="java.runtime.version" value="15.0.2+7-27"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\YY\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.variant" value=""/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:/Program Files/Java/apache-maven-3.6.3/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-15\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\YY\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\YY\bin;C:\Python39\Scripts;C:\Python39;C:\Program Files\Java\jdk-15\bin;C:\web\mysql-8.0.21-winx64\bin;E:\apache-tomcat-9.0.38\bin\startup.bat;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\apache-maven-3.6.3\bin;C:\WINDOWS\system32;E:\ffmpeg-N-100616-gca21cb1e36-win64-gpl-shared-vulkan\bin;E:\MinGW\bin;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;E:\hadoop-3.2.1\bin;C:\Users\YY\anaconda3;C:\Users\YY\anaconda3\Library\mingw-w64\bin;C:\Users\YY\anaconda3\Library\usr\bin;C:\Users\YY\anaconda3\Library\bin;C:\Users\YY\anaconda3\Scripts;C:\Users\YY\AppData\Roaming\Python\Python37\Scripts;C:\Program Files\Python37\Scripts;C:\Program Files\Python37;E:\Microsoft VS Code\bin;C:\Users\YY\AppData\Local\Microsoft\WindowsApps;C:\Users\YY\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
-    <property name="maven.conf" value="C:/Program Files/Java/apache-maven-3.6.3/conf"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/mnt/c/Program Files/Java/apache-maven-3.6.3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/mnt/c/Program Files/Java/apache-maven-3.6.3/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="59.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:/Program Files/Java/apache-maven-3.6.3/lib/jansi-native"/>
-    <property name="user.home" value="C:\Users\YY"/>
+    <property name="os.version" value="4.4.0-19041-Microsoft"/>
+    <property name="library.jansi.path" value="/mnt/c/Program Files/Java/apache-maven-3.6.3/lib/jansi-native"/>
+    <property name="user.home" value="/home/sinscry"/>
     <property name="user.timezone" value="Asia/Shanghai"/>
-    <property name="file.encoding" value="GBK"/>
+    <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="15"/>
-    <property name="user.name" value="YY"/>
-    <property name="java.class.path" value="C:/Program Files/Java/apache-maven-3.6.3/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="user.name" value="sinscry"/>
+    <property name="java.class.path" value="/mnt/c/Program Files/Java/apache-maven-3.6.3/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="15"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-15"/>
-    <property name="user.language" value="zh"/>
+    <property name="java.home" value="/opt/jdk-15.0.2"/>
+    <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="15"/>
+    <property name="java.version" value="15.0.2"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Program Files\Java\apache-maven-3.6.3"/>
-    <property name="file.separator" value="\"/>
-    <property name="java.version.date" value="2020-09-15"/>
+    <property name="maven.home" value="/mnt/c/Program Files/Java/apache-maven-3.6.3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2021-01-19"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="MaxTemperatureMapperTest" name="returnsMaximumIntegerInValues" time="0.299"/>
-  <testcase classname="MaxTemperatureMapperTest" name="ignoreMissingTemperatureRecord" time="0.029"/>
-  <testcase classname="MaxTemperatureMapperTest" name="processesValidRecord" time="0.013"/>
+  <testcase classname="MaxTemperatureMapperTest" name="returnsMaximumIntegerInValues" time="0.402"/>
+  <testcase classname="MaxTemperatureMapperTest" name="ignoreMissingTemperatureRecord" time="0.028"/>
+  <testcase classname="MaxTemperatureMapperTest" name="processesValidRecord" time="0.014"/>
+  <testcase classname="MaxTemperatureMapperTest" name="test" time="2.206"/>
 </testsuite>
